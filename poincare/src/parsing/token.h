@@ -50,6 +50,7 @@ public:
     Constant,
     Number,
     Identifier,
+    Unit,
     Undefined
   };
 

@@ -101,6 +101,11 @@ Token Tokenizer::popToken() {
     result.setString(start, popIdentifier());
     return result;
   }
+  if (currentChar == '_') {
+    Token result(Token::Unit);
+    result.setString(start, popIdentifier());
+    return result;
+  }
   if ('(' <= currentChar && currentChar <= '/') {
     // Those characters form a contiguous range in the ascii character set,
     // so one can make searching faster with this lookup table.
