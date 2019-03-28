@@ -46,6 +46,7 @@ private:
 
   // Specific Token parsers
   void parseUnexpected(Expression & leftHandSide, Token::Type stoppingType = (Token::Type)0);
+  void parseUnit(Expression & leftHandSide, Token::Type stoppingType = (Token::Type)0);
   void parseNumber(Expression & leftHandSide, Token::Type stoppingType = (Token::Type)0);
   void parseConstant(Expression & leftHandSide, Token::Type stoppingType = (Token::Type)0);
   void parseIdentifier(Expression & leftHandSide, Token::Type stoppingType = (Token::Type)0);

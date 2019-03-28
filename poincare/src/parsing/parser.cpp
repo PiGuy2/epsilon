@@ -77,6 +77,7 @@ Expression Parser::parseUntil(Token::Type stoppingType) {
     &Parser::parseConstant,        // Token::Constant
     &Parser::parseNumber,          // Token::Number
     &Parser::parseIdentifier,      // Token::Identifier
+    &Parser::parseUnit,            // Token::Unit
     &Parser::parseUnexpected       // Token::Undefined
   };
   Expression leftHandSide;
@@ -531,6 +532,9 @@ Expression Parser::parseCommaSeparatedList() {
     length++;
   } while (popTokenIfType(Token::Comma));
   return commaSeparatedList;
+}
+
+void Parser::parseUnit(Expression & leftHandSide, Token::Type stoppingType) {
 }
 
 }
